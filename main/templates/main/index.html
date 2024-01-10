@@ -1,21 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
-</head>
-<body>
-{% if is_authenticated %}
-    <p>{{ content }}</p>
-    <p>{{ list }}</p>
-    <p>{{ dict }}</p>
-{% endif %}
+{% extends "main/base.html" %}
+{% load static %}
 
-<h1>Home page</h1>
-<h6>hi wassup?</h6>
-    <p>{{ content }}</p>
-    <p>{{ list }}</p>
-    <p>{{ dict }}</p>
-</body>
-</html>
+
+{% block css %}
+    <link rel="stylesheet" href="{% static "templates-for-Django-4-course-Home/deps/css/my_footer_css.css" %}">
+{% endblock css %}
+
+{% block content %}
+    <h1 class="mt-5 pt-5"><strong>Магазин мебели HOME</strong></h1>
+{% endblock content %}
+
+{% block footer %}
+    <footer class="py-4 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Home Python Hub Studio 2023</p>
+        </div>
+    </footer>
+{% endblock footer %}
