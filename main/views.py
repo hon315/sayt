@@ -6,12 +6,13 @@ from django.shortcuts import render
 def index(request):
     context: dict[str,Any]={
         'title':'aifromuz',
-        'content':'home page of aifromuz',
-        'list':[1,2,3,4,],
-        'dict':{'first':1},
-        'is_authenticated':False
-
-
-
+        'content':'home page of aifromuz'
     }
     return render(request,'main/index.html',context)
+
+def about(request):
+    context: dict[str,Any]={
+        'title':'About',
+        'content':'home page of aifromuz'
+    }
+    return render(request,'main/about.html',context)
